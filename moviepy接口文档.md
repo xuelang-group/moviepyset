@@ -8,3 +8,12 @@
     "subclipStart": 10,
     "subclipEnd": 20
 }
+
+# "general.stop" 停止运行
+# 传参
+{
+    "uuid": "2b2133b6dc4d46bf815259bd61fad38d"
+}
+
+# general.checkStatus 查看进度
+# 传参

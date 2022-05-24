@@ -16,7 +16,7 @@ from suanpan.storage import storage
 
 
 from moviepy.editor import *
-
+from modules.utils import MyBarLogger
 
 @app.afterInit
 def initFront(_):
@@ -30,8 +30,8 @@ def videoEdit(args):
     subclip_start=args['subclipStart']
     subclip_end=args['subclipEnd']
     clip = VideoFileClip(infile).subclip(subclip_start,subclip_end)
-    
-    clip.write_videofile(outfile)
+    my_logger = MyBarLogger()
+    clip.write_videofile(outfile, logger=my_logger)
     app.send({"out1": outfile})
 
 if __name__ == "__main__":

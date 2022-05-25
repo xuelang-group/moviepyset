@@ -17,8 +17,8 @@ import time
 import threading
 from proglog import ProgressBarLogger
 
-sys.path.append("./")
-from components.videoedit import *
+# sys.path.append("./")
+# from components.videoedit import *
 import inspect
 import ctypes
 module = Module()

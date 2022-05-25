@@ -44,7 +44,7 @@ def run_videoEditor(context):
     args=context['args'] #or context.args看到时候那个跑的起
     saveConfig(args)
 
-    if args["type"]=="videoEditor": #正在开发多线程
+    if args["type"]=="videoEditor": #多线程
         globals()['node'+args["uuid"]]=Job(target = videoEdit, kwargs=context)
         globals()['node'+args["uuid"]].start()    
 

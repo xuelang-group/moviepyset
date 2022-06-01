@@ -46,7 +46,10 @@ def run_videoEditor(context):
 
     if args["type"]=="videoEditor": #多线程
         globals()['node'+args["uuid"]]=Job(target = videoEdit, kwargs=context)
-        globals()['node'+args["uuid"]].start()    
+        globals()['node'+args["uuid"]].start()
+    if args["type"]=="audioEditor": #多线程
+        globals()['node'+args["uuid"]]=Job(target = audioEdit, kwargs=context)
+        globals()['node'+args["uuid"]].start()
 
 
 @module.on("general.stop")

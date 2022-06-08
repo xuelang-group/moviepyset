@@ -1,0 +1,223 @@
+type: videoEffect
+name: 视频特效
+parameters: #如果内容都为None，则都是none，如果有个不是None，则其他为None的都用default值
+  - key: inFile
+    name: 源文件路径
+    type: list
+  - key: saveFile
+    name: 保存路径
+    type: string
+  - key: accelDecel
+    name: 调速
+    children:    
+    - key: newDuAccelDecel
+      name: 视频总长
+      type: int
+    - key: abruptness
+      name: 倍速
+      type: float
+      default: 1.0
+    - key: soonness
+      name: 持续时间
+      type: int
+      default: 1.0
+  - key: blackwhite
+    name: 黑白特效
+    children:       
+    - key: RGBBlackwhite
+      name: RGB
+      type: list
+    - key: presLum
+      name: 保持亮度
+      type: bool
+      default: True
+  - key: blink
+    name: 闪烁特效
+    children:     
+    - key: dOn
+      name: 每x秒显示
+      type: float
+    - key: dOff
+      name: 每x秒消失
+      type: float
+  - key: colorx
+    name: 色彩增幅
+    children:  
+    - key: colorxFactor
+      name: 增幅
+      type: float
+  - key: fadein
+    name: 淡入
+    children:  
+    - key: fadeinDu
+      name: 淡入时长
+      type: float
+    - key: fadeinColor
+      name: 开始颜色
+      type: float
+  - key: fadeout
+    name: 淡入
+    children:  
+    - key: fadeoutDu
+      name: 淡入时长
+      type: float
+    - key: fadeoutColor
+      name: 开始颜色
+      type: float      
+  - key: freeze
+    name: 冷冻特效
+    children:  
+    - key: frzTime
+      name: 冷冻时刻
+      type: any
+    - key: frzDuration
+      name: 冷冻时长
+      type: float
+  - key: freezeRegion
+    name: 局部冷冻
+    children:  
+    - key: fzregionTime
+      name: 冷冻时刻
+      type: any
+    - key: region
+      name: 冷冻区域
+      type: tuple
+    - key: outsideRegion
+      name: 非冷冻区域
+      type: tuple
+    - key: frzrgMask
+      name: 遮罩
+      type: tuple
+  - key: gammaCorr
+    name: 伽玛校正
+    children:  
+    - key: gamma
+      name: gamma
+      type: float
+  - key: headblur
+    name: 局部模糊
+    children:  
+    - key: hbFx
+      name: 模糊原点x坐标
+      type: float
+    - key: hbFy
+      name: 模糊原点y坐标
+      type: float      
+    - key: rZone
+      name: 模糊半径
+      type: float
+    - key: rBlur
+      name: 模糊强度
+      type: float
+  - key: invertColors
+    name: 颜色反转
+    type: bool
+  - key: loop
+    name: 循环
+    children:      
+    - key: loopNum
+      name: 循环次数
+      type: int
+    - key: loopDu
+      name: 持续时间
+      type: float
+  - key: lumContrast
+    name: 亮度对比度
+    children:      
+    - key: lum
+      name: 亮度
+      type: int
+      default: 0
+    - key: contrast
+      name: 对比度
+      type: int
+      default: 0
+    - key: contrastThr
+      name: 对比度 #不知道啥意思
+      type: int     
+      default: 127
+  - key: makeLoopable
+    name: 结尾淡入
+    children: 
+    - key: cross
+      name: 淡入持续时间
+      type: int      
+  - key: maskAnd
+    name: 遮罩(与) #不知道啥意思
+    children: 
+    - key: andOtherClip
+      name: 其他片段路径
+      type: string
+  - key: maskOr
+    name: 遮罩(或) #不知道啥意思
+    children: 
+    - key: orOtherClip
+      name: 其他片段路径
+      type: string
+  - key: maskColor
+    name: 遮罩(颜色)
+    children: 
+    - key: maskColor
+      name: 颜色
+      type: tuple
+    - key: maskThr
+      name: thr
+      type: float
+      default: 0
+    - key: maskS
+      name: s
+      type: float   
+      default: 1
+  - key: mirrorX
+    name: 水平镜像翻转
+    type: bool
+  - key: mirrorY
+    name: 垂直镜像翻转
+    type: bool
+  - key: painting
+    name: 油画特效
+    children:     
+    - key: saturation #当用户对所有param都没有填的时候，children param传给后端都是None，如果填了一个，则另一个每天的由None改为default值，yaml里没写default的default都为None
+      name: 饱和度
+      type: float
+      default: 1.4
+    - key: black
+      name: 黑度
+      type: float
+      default: 0.006
+  - key: scroll
+    name: 滚动
+    children:     
+    - key: scroll_w
+      name: 宽度
+      type: float
+    - key: scroll_h
+      name: 高度
+      type: float
+    - key: xSpeed #不太确定啥意思
+      name: 水平速度
+      type: float
+    - key: ySpeed
+      name: 垂直速度
+      type: float   
+    - key: xStart #不太确定啥意思
+      name: 水平开始时间
+      type: float
+    - key: yStart
+      name: 垂直开始时间
+      type: float 
+  - key: supersample
+    name: 超级采样
+    children:         
+    - key: ssD
+      name: 前后x秒 #不太确定
+      type: int
+    - key: ssNframes
+      name: 前后x帧
+      type: int
+  - key: timeMirror
+    name: 倒放
+    type: bool
+  - key: timeSymmetrize
+    name: 先正放再倒放
+    type: bool

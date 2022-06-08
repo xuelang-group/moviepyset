@@ -1,0 +1,9 @@
+type: videoConcat
+name: 视频拼接
+parameters: 
+  - key: inFile
+    name: 源文件路径
+    type: list
+  - key: saveFile
+    name: 保存路径
+    type: string

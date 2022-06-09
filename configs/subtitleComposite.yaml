@@ -18,5 +18,5 @@ parameters:
       type: string
     - key: fontsize
       name: 字体大小
-      type: int
+      type: float
       default: 60 

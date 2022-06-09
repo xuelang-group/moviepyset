@@ -9,12 +9,21 @@
     "subclipStart": 10,
     "subclipEnd": 20
 }
+# 返回
+点run的时候就会不断生成进度百分比，等着按“查看进度”按钮是给展示出来
 
 # "general.stop" 停止运行
 # 传参
 {
     "uuid": "2b2133b6dc4d46bf815259bd61fad38d"
 }
+# 返回
+null
 
 # general.checkStatus 查看进度
 # 传参
+{
+    "uuid": "2b2133b6dc4d46bf815259bd61fad38d"
+}
+# 返回
+不断emit的进度条百分比

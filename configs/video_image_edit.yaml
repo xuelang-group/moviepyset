@@ -1,0 +1,33 @@
+type: videoConcat
+name: 视频拼接
+parameters:
+  - key: inFile
+    name: 视频文件路径
+    type: string
+  - key: imagePath
+    name: 图片路径
+    type: string
+  - key: saveFile
+    name: 保存路径
+    type: string
+  - key: subParam
+    name: 图片放置属性
+    children:
+      - key: set_start
+        name: 图片出现的时间
+        type: Float
+        default: 0
+      - key: set_duration
+        name: 图片在视频上的停留时长
+        type: Float
+        default: 10
+      - key: pos_x
+        name: 图片放置横坐标
+        type: string
+      - key: pos_y
+        name: 图片放置纵坐标
+        type: string
+      - key: relative
+        name: 坐标是否是相对值
+        type: boolean
+        default: false

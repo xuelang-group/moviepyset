@@ -1,0 +1,21 @@
+type: videoConcat
+name: 视频拼接
+parameters:
+  - key: inVideoFile
+    name: 视频文件路径
+    type: string
+  - key: inAudioFile
+    name: 音频文件路径
+    type: string
+  - key: saveAudioFile
+    name: 保存原视频中的音频路径
+    type: string
+  - key: saveVideoFile
+    name: 保存视频路径
+    type: string
+  - key: split_start
+    name: 音频剪辑开始时间
+    type: Int
+  - key: split_end
+    name: 音频剪辑结束时间
+    type: Int

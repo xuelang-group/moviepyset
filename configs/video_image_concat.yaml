@@ -1,0 +1,20 @@
+type: videoConcat
+name: 视频拼接
+parameters:
+  - key: inFile
+    name: 视频文件路径
+    type: string
+  - key: imagePath
+    name: 图片路径
+    type: string
+  - key: saveFile
+    name: 保存路径
+    type: string
+  - key: start
+    name: 插入视频位置（单位秒）
+    type: Float
+  - key: set_duration
+    name: 图片停留时长
+    type: Float
+    default: 1
+

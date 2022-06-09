@@ -69,7 +69,7 @@ parameters: #如果内容都为None，则都是none，如果有个不是None，�
     children:  
     - key: frzTime
       name: 冷冻时刻
-      type: any
+      type: any #float, string "end"
     - key: frzDuration
       name: 冷冻时长
       type: float
@@ -78,7 +78,7 @@ parameters: #如果内容都为None，则都是none，如果有个不是None，�
     children:  
     - key: fzregionTime
       name: 冷冻时刻
-      type: any
+      type: float
     - key: region
       name: 冷冻区域
       type: tuple

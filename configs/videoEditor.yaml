@@ -29,8 +29,8 @@ parameters:
     name: 尺寸调整
     children:         
     - key: resizeNewsize
-      name: 视频宽度
-      type: any
+      name: 新尺寸
+      type: any #tuple, float, function
     - key: resizeWidth
       name: 视频宽度
       type: int

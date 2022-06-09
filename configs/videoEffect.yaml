@@ -12,14 +12,14 @@ parameters: #如果内容都为None，则都是none，如果有个不是None，�
     children:    
     - key: newDuAccelDecel
       name: 视频总长
-      type: int
+      type: float
     - key: abruptness
       name: 倍速
       type: float
       default: 1.0
     - key: soonness
       name: 持续时间
-      type: int
+      type: float
       default: 1.0
   - key: blackwhite
     name: 黑白特效
@@ -141,7 +141,7 @@ parameters: #如果内容都为None，则都是none，如果有个不是None，�
     children: 
     - key: cross
       name: 淡入持续时间
-      type: int      
+      type: float  
   - key: maskAnd
     name: 遮罩(与) #不知道啥意思
     children: 
@@ -211,7 +211,7 @@ parameters: #如果内容都为None，则都是none，如果有个不是None，�
     children:         
     - key: ssD
       name: 前后x秒 #不太确定
-      type: int
+      type: float
     - key: ssNframes
       name: 前后x帧
       type: int

@@ -38,7 +38,7 @@ def initFront(_):
 
 
 @app.input(String(key="inputData1", alias="inputData1"))
-@app.param(Json(key="param0", alias="inFile"))
+@app.param(String(key="param0", alias="inFile"))
 @app.param(String(key="param1", alias="saveFile"))
 @app.param(String(key="param2", alias="imagePath"))
 @app.param(Int(key="param3", alias="start"))
@@ -46,7 +46,7 @@ def initFront(_):
 #视频中间加入一张图片当作图片的某一帧
 def videoImageConcat(context):
     args = context.args
-    infile=args['inFile'][0]
+    infile=args['inFile']
     outfile=args['saveFile']
 
     clip = VideoFileClip(infile)

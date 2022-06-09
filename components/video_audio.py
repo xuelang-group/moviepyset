@@ -46,7 +46,7 @@ def videoAudio(context):
 
     #删除视频中的音频
     video_without_audio = clip.without_audio()
-    video_without_audio.write_videofile("../without_audio.mp4")
+    #video_without_audio.write_videofile("../without_audio.mp4")
     #添加音频并循环--以视频长度为准
     split_start = args["split_start"]
     split_end = args["split_end"]

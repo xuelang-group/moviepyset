@@ -24,7 +24,7 @@ def initFront(_):
 
 #图片放在视频的哪个位置，持续多久，在哪里放，位置什么的
 @app.input(String(key="inputData1", alias="inputData1"))
-@app.param(Json(key="param0", alias="inFile"))
+@app.param(String(key="param0", alias="inFile"))
 @app.param(String(key="param1", alias="saveFile"))
 @app.param(String(key="param2", alias="imagePath"))
 # @app.param(String(key="param5", alias="pos_y"))
@@ -36,7 +36,7 @@ def initFront(_):
 
 def videoImageEdit(context):
     args = context.args
-    infile=args['inFile'][0]
+    infile=args['inFile']
     outfile=args['saveFile']
     clip = VideoFileClip(infile)
     #选图片

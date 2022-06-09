@@ -1,0 +1,18 @@
+  type: audioEditor
+  name: 音频编辑
+  parameters:
+   - key: inFile
+     name: 源文件路径
+     type: list
+   - key: saveFile
+     name: 保存路径
+     type: string
+   - key: subclipStart
+     name: 剪辑开始时间
+     type: int
+   - key: subclipEnd
+     name: 剪辑结束时间
+     type: int
+   - key: soundMultiple
+     name: 声音大小
+     type: float

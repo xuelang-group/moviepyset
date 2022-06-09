@@ -1,0 +1,42 @@
+  type: videoConcat
+  name: 视频拼接
+  parameters:
+   - key: inFile
+     name: 视频文件路径
+     type: string
+   - key: saveFile
+     name: 保存路径
+     type: string
+   - key: subParam
+       name: 文本设置
+       children:
+         - key: txt
+           name: 文本内容
+           type: string
+         - key: fontsize
+           name: 字体大小
+           type: float
+           default: 60
+         - key: color
+           name: 字体颜色
+           type: string
+         - key: pos_x
+           name: 文本放置横坐标
+           type: string
+         - key: pos_y
+           name: 文本放置纵坐标
+           type: string
+         - key: relative
+           name: 坐标是否是相对值
+           type: boolean
+           default: false
+         - key: set_start
+           name: 文本出现的时间
+           type: Int
+           default: 0
+         - key: set_duration
+           name: 文本停留时长
+           type: Float
+           default: 10
+
+

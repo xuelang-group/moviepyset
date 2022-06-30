@@ -1,1 +1,2 @@
-suanpan-core>=0.16.8
+python-suanpan-slim
+pyside6

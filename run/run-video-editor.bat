@@ -1,0 +1,1 @@
+call video-editor.exe components.qtExample.main

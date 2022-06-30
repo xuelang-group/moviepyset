@@ -8,7 +8,6 @@ from suanpan.log import logger
 
 app.modules.register("socketapi", socketapi)
 
-
 @app.input(String(key="inputData1"))
 @app.output(String(key="outputData1"))
 def main(context):

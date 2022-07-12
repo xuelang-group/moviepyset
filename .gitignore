@@ -1,3 +1,12 @@
 .idea
 venv
 test.py
+components/__pycache__
+.vscode/
+ImageMagick-7.1.0-Q16/
+__pycache__/
+build/
+hooks/__pycache__/
+ideo-editor.spec
+dist/
+video-editor.spec

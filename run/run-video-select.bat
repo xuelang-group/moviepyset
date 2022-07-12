@@ -1,0 +1,1 @@
+call video-editor.exe components.select_videos_qt.main

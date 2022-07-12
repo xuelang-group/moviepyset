@@ -1,1 +1,1 @@
-call video-editor.exe components.qtExample.main
+call video-editor.exe components.video_qt_subclip.main

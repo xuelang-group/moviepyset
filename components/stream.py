@@ -7,7 +7,7 @@ logging.basicConfig()
 
 class Stream(QtCore.QObject):
 
-    def __init__(self, callFunc, initFunc=None, inArgs=[], outArgs=[], paramArgs=[]):
+    def __init__(self, callFunc, initFunc, inArgs=[], outArgs=[], paramArgs=[]):
         super().__init__()
         for inArg in inArgs:
             app.input(inArg)
